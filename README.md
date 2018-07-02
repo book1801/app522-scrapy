@@ -8,5 +8,4 @@ app522的spider实例
 * scrapy版本：1.5
 
 ## 爬虫运行命令
-进入到爬虫目录，执行下面的命令 
-scrapy crawl appcrawl
+进入到爬虫目录，执行下面的命令: scrapy crawl appcrawl
