@@ -9,19 +9,27 @@ import scrapy
 
 
 #class App522Item(scrapy.Item):
+
     # define the fields for your item here like:
     # name = scrapy.Field()
 #    pass
 
+
 class App522AppItem(scrapy.Item):
+    url=scrapy.Field()
     appname=scrapy.Field()
     downloadcount=scrapy.Field()
     size=scrapy.Field()
     updated=scrapy.Field()
     type=scrapy.Field()
     tag=scrapy.Field()
+    content=scrapy.Field()
+    
     
 
 class App522InfoItem(scrapy.Item):
+    url=scrapy.Field()
     title=scrapy.Field()
     content=scrapy.Field()
+
+    

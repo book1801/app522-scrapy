@@ -14,9 +14,18 @@ BOT_NAME = 'app522'
 SPIDER_MODULES = ['app522.spiders']
 NEWSPIDER_MODULE = 'app522.spiders'
 
+#定义数据库连接信息
+MYSQL_HOST = 'localhost'
+MYSQL_DBNAME = 'app522'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = 'root'
+
+#定义错误日志
+LOG_FILE = "mySpider.log"
+LOG_LEVEL = "ERROR"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'app522 (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -41,7 +50,7 @@ ROBOTSTXT_OBEY = False
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-   'Accept-Language': 'zh-CN,zh',
+   'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
 }
 
 # Enable or disable spider middlewares
@@ -64,9 +73,9 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'app522.pipelines.App522Pipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'app522.pipelines.App522Pipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +97,5 @@ DEFAULT_REQUEST_HEADERS = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
